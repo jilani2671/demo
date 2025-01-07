@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Tailwind</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 relative">
+    <!-- Top Navbar (visible on desktop) -->
+    <nav class="hidden lg:flex bg-gray-800 text-white px-6 py-4 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="#" class="text-white hover:text-gray-300">MyLogo</a>
+            </div>
+            <!-- Links -->
+            <div class="flex space-x-8">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Search</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Alerts</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Profile</a>
+            </div>
+            <!-- Action Button -->
+            <div>
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+                    <i class="fa fa-ellipsis-v"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mx-auto py-16 px-4">
+        <h1 class="text-2xl font-bold text-center mb-6">Main Content Area</h1>
+        <p class="text-center text-gray-600 mb-8">This is where the main page content would go. Below are some example cards.</p>
+
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-lg duration-300">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <p class="text-gray-600 text-sm">This is a brief description of the card's content. It's concise and to the point.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-lg duration-300">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Card Title 2</h3>
+                    <p class="text-gray-600 text-sm">This is a brief description of the card's content. It's concise and to the point.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-lg duration-300">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Card Title 3</h3>
+                    <p class="text-gray-600 text-sm">This is a brief description of the card's content. It's concise and to the point.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navbar (visible on mobile) -->
+    <nav class="fixed bottom-0 left-0 w-full bg-gray-800 text-white lg:hidden z-50">
+        <div class="flex justify-around items-center py-3">
+            <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-sm">Home</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-search text-xl"></i>
+                <span class="text-sm">Search</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-bell text-xl"></i>
+                <span class="text-sm">Alerts</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-300 hover:text-white transition duration-300">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-sm">Profile</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
